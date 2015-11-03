@@ -1,13 +1,14 @@
 class PauloBenatto(object):
 
     def __init__(self):
-        self.skills = ["Linux", "C", "Python", "git"]
+        self.skills = ["Linux", "C", "Python", "Go", "git"]
         self.interests = ["GoLang", "Python", "C", "JavaScript", "Lua"]
 
         self.me = """Hello, 
-                my name is Paulo Leonardo Benatto, a Brazilian coder
-                delivering nonsense bugs and still want to be paid for that.
-                """
+            my name is Paulo Leonardo Benatto, a Brazilian coder
+            delivering nonsense bugs and still want to be paid for that.
+            I'm interested in software development envolving languages
+            such as C, Lua, Python, Go, JavaScript and Ruby."""
 
     def experience(self):
         self.exp = []
