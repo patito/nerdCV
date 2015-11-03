@@ -10,7 +10,7 @@ type PauloBenatto struct {
 	experiences []experience
 }
 
-func (pb *PauloBenatto) Abaout() {
+func (pb *PauloBenatto) About() {
 	pb.me = `Hello, 
             my name is Paulo Leonardo Benatto, a Brazilian coder
             delivering nonsense bugs and still want to be paid for that.`
@@ -18,6 +18,7 @@ func (pb *PauloBenatto) Abaout() {
 
 func (pb *PauloBenatto) Experience() {
 
+    pb.experiences = make([]experience, 0)
 	brandwatch := map[string]string{
 		"Company":      "Brandwatch",
 		"Role":         "Linux System Administrator",
@@ -47,7 +48,7 @@ func (pb *PauloBenatto) Experience() {
 		"Role":         "Software Engineer",
 		"Activities":   `I was part of a team responsible to develop VoIP
                         products such as softphone, PBX and IP phone.`,
-		"Technologies": "Linux, C/C++, subversion, SIP, wireshark, valgrind",
+		"Technologies": "Linux, C/C++, Python, SIP, Wireshark, Valgrind",
 	}
 
 	pb.experiences = append(pb.experiences, brandwatch, dba, secplus, digitro)
@@ -58,15 +59,17 @@ func (pb *PauloBenatto) OpenSource() {
 
 	libmalelf := map[string]string{
 		"description": `The libmalelf is an evil library that SHOULD be
-            used for good! It was developed with the intent to assist in the
-            process of infecting binaries and provide a safe way to analyze malwares.`,
+            used for good! It was developed with the intent to assist in
+            the process of infecting binaries and provide a safe way to
+            analyze malwares.`,
 		"authors": "Tiago Natel de Moura, Paulo Leonardo Benatto",
 		"site":    "github.com/SecPlus/libmalelf",
 	}
 
 	libpenetra := map[string]string{
-		"description": `The libpenetra was created with the goal of studying the
-            windows binary format known as Portable Executable (PE).`,
+		"description": `The libpenetra was created with the goal of
+		    studying the windows binary format known as Portable
+		    Executable (PE).`,
 		"authors": "Tiago Natel de Moura, Paulo Leonardo Benatto",
 		"site":    "github.com/patito/libpenetra",
 	}
@@ -89,8 +92,8 @@ func (pb *PauloBenatto) Contact() {
 
 func main() {
 	pb := &PauloBenatto{}
-	pb.Abaout()
+	pb.About()
 	pb.Experience()
-	pn.OpenSource()
+	pb.OpenSource()
 	pb.Contact()
 }
