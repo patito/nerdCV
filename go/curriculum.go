@@ -18,8 +18,8 @@ func (pb *PauloBenatto) About() {
 	pb.me = `Hello, 
         my name is Paulo Leonardo Benatto, a Brazilian coder
         delivering nonsense bugs and still want to be paid for that.
-        I have interest in software development in C, Lua, Python, Go,
-        JavaScript and Ruby.`
+        I'm interested in software development envolving languages
+        such as C, Lua, Python, Go, JavaScript and Ruby.`
 }
 
 func (pb *PauloBenatto) MyExperience() {
