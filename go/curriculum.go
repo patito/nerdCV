@@ -2,58 +2,62 @@ package main
 
 import "fmt"
 
-type experience map[string]string
+type Experience map[string]interface{}
+type Project    map[string]interface{}
+type Authors    []string
+type Skills     []string
 
 type PauloBenatto struct {
 	me          string
 	contact     map[string]string
-	experiences []experience
+	experiences []Experience
+	projects    []Project
 }
 
 func (pb *PauloBenatto) About() {
 	pb.me = `Hello, 
-            my name is Paulo Leonardo Benatto, a Brazilian coder
-            delivering nonsense bugs and still want to be paid for that.`
+        my name is Paulo Leonardo Benatto, a Brazilian coder
+        delivering nonsense bugs and still want to be paid for that.
+        I have interest in software development in C, Lua, Python, Go,
+        JavaScript and Ruby.`
 }
 
-func (pb *PauloBenatto) Experience() {
+func (pb *PauloBenatto) MyExperience() {
 
-    pb.experiences = make([]experience, 0)
+    pb.experiences = make([]Experience, 0)
 
-	brandwatch := map[string]string {
+	brandwatch := Experience {
 		"Company":      "Brandwatch",
 		"Role":         "Linux System Administrator",
 		"Activities":   "Keep everything running.",
-		"Technologies": "Linux, git, bacula, ansible, automation",
+		"Technologies":  Skills{"Linux", "git", "bacula", "ansible", "automation"},
 	}
 
-	dba := map[string]string {
+	dba := Experience {
 		"Company":     "DBA",
 		"Role":        "Software Engineer Freelance",
 		"Activities":  `I was part of a team to develop a system to count
                         the number of vehicles on the Brazilian highways.`,
-		"Technologies": "Linux, C/C++, git, python, Raspberry PI",
+		"Technologies": Skills{"Linux", "C/C++", "git", "python", "Raspberry PI"},
 	}
 
-	secplus := map[string]string {
+	secplus := Experience {
 		"Company":    "SEC+",
 		"Role":       "Software Engineer",
 		"Activities": `Backend development of web system for intelligent
                         monitoring and management of natural disasters using
                         Python and the Django framework.`,
-		"Technologies": "Linux, C/C++, git, python, javascript",
+		"Technologies": Skills{"Linux", "C/C++", "git", "python", "javascript"},
 	}
 
-	digitro := map[string]string {
+	digitro := Experience {
 		"Company":      "Digitro",
 		"Role":         "Software Engineer",
 		"Activities":   `I was part of a team responsible to develop VoIP
                         products such as softphone, PBX and IP phone.`,
-		"Technologies": "Linux, C/C++, Python, SIP, Wireshark, Valgrind",
+		"Technologies": Skills{"Linux", "C/C++", "Python", "SIP", "Wireshark"},
 	}
-
 	pb.experiences = append(pb.experiences, brandwatch, dba, secplus, digitro)
-	fmt.Println(pb.experiences)
 }
 
 func (pb *PauloBenatto) Contact() {
@@ -68,36 +72,34 @@ func (pb *PauloBenatto) Contact() {
 	}
 }
 
-
-
-
-
 func (pb *PauloBenatto) OpenSource() {
 
-	libmalelf := map[string]string {
+	pb.projects = make([]Project, 0)
+
+	libmalelf := Project {
 		"description": `The libmalelf is an evil library that SHOULD be
             used for good! It was developed with the intent to assist in
             the process of infecting binaries and provide a safe way to
             analyze malwares.`,
-		"authors": "Tiago Natel de Moura, Paulo Leonardo Benatto",
+		"authors": Authors{"Tiago Natel de Moura", "Paulo Leonardo Benatto"},
 		"site":    "github.com/SecPlus/libmalelf",
 	}
 
-	libpenetra := map[string]string {
+	libpenetra := Project {
 		"description": `The libpenetra was created with the goal of
 		    studying the windows binary format known as Portable
 		    Executable (PE).`,
-		"authors": "Tiago Natel de Moura, Paulo Leonardo Benatto",
+		"authors": Authors{"Tiago Natel de Moura", "Paulo Leonardo Benatto"},
 		"site":    "github.com/patito/libpenetra",
 	}
-	fmt.Println(libmalelf)
-	fmt.Println(libpenetra)
+
+	pb.projects = append(pb.projects, libmalelf, libpenetra)
 }
 
 func main() {
 	pb := &PauloBenatto{}
 	pb.About()
-	pb.Experience()
+	pb.MyExperience()
 	pb.OpenSource()
 	pb.Contact()
 }
