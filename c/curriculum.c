@@ -39,8 +39,8 @@ static Experience Brandwatch = {
 
 static Experience DBA = {
     .role = "Software Engineer Freelance",
-    .activities = "I was part of a team to develop a system to count "
-                "the number of vehicles on the Brazilian highways.",
+    .activities = "Develop a system, in C language, to analyse vehicle "
+                  "traffic on Brazilian highways",
     .technologies = {"Linux", "C/C++", "git", "python", "Raspberry PI"}
 };
 
