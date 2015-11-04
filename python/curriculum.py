@@ -24,8 +24,8 @@ class PauloBenatto(object):
         dba = {
             "Company": "DBA",
             "Role": "Software Engineer Freelance",
-            "Activities": """I was part of a team to develop a system to count
-                        the number of vehicles on the Brazilian highways.""",
+            "Activities": """Develop a system, in C language, to analyse vehicle traffic
+                          on Brazilian highways.""",
             "Technologies": ["Linux", "C/C++", "git", "python", "Raspberry PI"]
         }
         self.exp.append(dba)
