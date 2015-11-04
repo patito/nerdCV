@@ -63,8 +63,8 @@ class PauloBenatto(object):
         }
 
         libpenetra = {
-            "description": """The libpenetra was created with the goal of studying the
-            windows binary format known as Portable Executable (PE).""",
+            "description": """The libpenetra was created with the goal of
+             studying the windows binary format known as Portable Executable (PE).""",
             "authors": ["Tiago Natel de Moura", "Paulo Leonardo Benatto"],
             "site": "github.com/patito/libpenetra"
         }
