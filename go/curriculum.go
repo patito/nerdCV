@@ -15,11 +15,11 @@ type PauloBenatto struct {
 }
 
 func (pb *PauloBenatto) About() {
-	pb.me = `Hello, 
-        my name is Paulo Leonardo Benatto, a Brazilian coder
-        delivering nonsense bugs and still want to be paid for that.
-        I'm interested in software development envolving languages
-        such as C, Lua, Python, Go, JavaScript and Ruby.`
+	pb.me = "Hello,\n" +
+        "my name is Paulo Leonardo Benatto, a Brazilian coder\n" +
+        "delivering nonsense bugs and still want to be paid for that.\n" +
+        "I'm interested in software development envolving languages\n" +
+        "such as C, Lua, Python, Go, JavaScript and Ruby."
 }
 
 func (pb *PauloBenatto) MyExperience() {
@@ -96,10 +96,38 @@ func (pb *PauloBenatto) OpenSource() {
 	pb.projects = append(pb.projects, libmalelf, libpenetra)
 }
 
+func (pb PauloBenatto) String() {
+
+	fmt.Println("\nSUMMARY:\n")
+	fmt.Println(pb.me);
+
+	fmt.Println("\nCONTACT:\n")
+	for key, value := range pb.contact {
+		fmt.Println(key,"   \t:", value)
+	}
+
+	fmt.Println("\nEXPERIENCE:\n")
+	for _, exp := range pb.experiences {
+		for key, value := range exp {
+            fmt.Println(key,"\t:", value)
+		}
+		fmt.Println("\n")
+    }
+
+	fmt.Println("\nPROJECTS:\n")
+    for _, proj := range pb.projects {
+		for key, value := range proj {
+            fmt.Println(key,"\t:", value)
+		}
+		fmt.Println("\n")
+    }
+}
+
 func main() {
 	pb := &PauloBenatto{}
 	pb.About()
 	pb.MyExperience()
 	pb.OpenSource()
 	pb.Contact()
+	pb.String()
 }
