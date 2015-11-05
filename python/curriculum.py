@@ -24,8 +24,8 @@ class PauloBenatto(object):
         dba = {
             "Company": "DBA",
             "Role": "Software Engineer Freelance",
-            "Activities": """Develop a system, in C language, to analyse vehicle traffic
-                          on Brazilian highways.""",
+            "Activities": """Develop a system, in C language, to analyse vehicle
+                          traffic on Brazilian highways.""",
             "Technologies": ["Linux", "C/C++", "git", "python", "Raspberry PI"]
         }
         self.exp.append(dba)
@@ -57,7 +57,8 @@ class PauloBenatto(object):
         libmalelf = {
             "description": """The libmalelf is an evil library that SHOULD be
             used for good! It was developed with the intent to assist in the 
-            process of infecting binaries and provide a safe way to analyze malwares.""",
+            process of infecting binaries and provide a safe way to analyze
+            malwares.""",
             "authors": ["Tiago Natel de Moura", "Paulo Leonardo Benatto"],
             "site": "github.com/SecPlus/libmalelf"
         }
