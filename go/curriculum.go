@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 type Experience map[string]interface{}
-type Project    map[string]interface{}
-type Authors    []string
-type Skills     []string
+type Project map[string]interface{}
+type Authors []string
+type Skills []string
 
 type PauloBenatto struct {
 	me          string
@@ -16,44 +16,44 @@ type PauloBenatto struct {
 
 func (pb *PauloBenatto) About() {
 	pb.me = "Hello,\n" +
-        "my name is Paulo Leonardo Benatto, a Brazilian coder\n" +
-        "delivering nonsense bugs and still want to be paid for that.\n" +
-        "I'm interested in software development envolving languages\n" +
-        "such as C, Lua, Python, Go, JavaScript and Ruby."
+		"I'm a Brazilian coder working as Linux System Administrator and\n" +
+		"passionate about GoLang. I'm also interested in software development\n" +
+		"envolving languages such as C, Lua, Python and JavaScript. I am an  \n" +
+		"eternal learner, with can-do attitude that enjoy sharing knowledge."
 }
 
 func (pb *PauloBenatto) MyExperience() {
 
-    pb.experiences = make([]Experience, 0)
+	pb.experiences = make([]Experience, 0)
 
-	brandwatch := Experience {
+	brandwatch := Experience{
 		"Company":      "Brandwatch",
 		"Role":         "Linux System Administrator",
 		"Activities":   "Keep everything running.",
-		"Technologies":  Skills{"Linux", "git", "bacula", "ansible", "automation"},
+		"Technologies": Skills{"Linux", "git", "bacula", "ansible", "automation"},
 	}
 
-	dba := Experience {
-		"Company":     "DBA",
-		"Role":        "Software Engineer Freelance",
-		"Activities":  `Develop a system, in C language, to analyse vehicle traffic
+	dba := Experience{
+		"Company": "DBA",
+		"Role":    "Software Engineer Freelance",
+		"Activities": `Develop a system, in C language, to analyse vehicle traffic
 		                on Brazilian highways.`,
 		"Technologies": Skills{"Linux", "C/C++", "git", "python", "Raspberry PI"},
 	}
 
-	secplus := Experience {
-		"Company":    "SEC+",
-		"Role":       "Software Engineer",
+	secplus := Experience{
+		"Company": "SEC+",
+		"Role":    "Software Engineer",
 		"Activities": `Backend development of web system for intelligent
                         monitoring and management of natural disasters using
                         Python and the Django framework.`,
 		"Technologies": Skills{"Linux", "C/C++", "git", "python", "javascript"},
 	}
 
-	digitro := Experience {
-		"Company":      "Digitro",
-		"Role":         "Software Engineer",
-		"Activities":   `I was part of a team responsible to develop VoIP
+	digitro := Experience{
+		"Company": "Digitro",
+		"Role":    "Software Engineer",
+		"Activities": `I was part of a team responsible to develop VoIP
                         products such as softphone, PBX and IP phone.`,
 		"Technologies": Skills{"Linux", "C/C++", "Python", "SIP", "Wireshark"},
 	}
@@ -62,7 +62,7 @@ func (pb *PauloBenatto) MyExperience() {
 
 func (pb *PauloBenatto) Contact() {
 
-	pb.contact = map[string]string {
+	pb.contact = map[string]string{
 		"phone":    "07424600850",
 		"address":  "Sudeley Place 14, Brighton, UK",
 		"email":    "benatto@gmail.com",
@@ -76,7 +76,7 @@ func (pb *PauloBenatto) OpenSource() {
 
 	pb.projects = make([]Project, 0)
 
-	libmalelf := Project {
+	libmalelf := Project{
 		"description": `The libmalelf is an evil library that SHOULD be
             used for good! It was developed with the intent to assist in
             the process of infecting binaries and provide a safe way to
@@ -85,7 +85,7 @@ func (pb *PauloBenatto) OpenSource() {
 		"site":    "github.com/SecPlus/libmalelf",
 	}
 
-	libpenetra := Project {
+	libpenetra := Project{
 		"description": `The libpenetra was created with the goal of
 		    studying the windows binary format known as Portable
 		    Executable (PE).`,
@@ -99,28 +99,28 @@ func (pb *PauloBenatto) OpenSource() {
 func (pb PauloBenatto) String() {
 
 	fmt.Println("\nSUMMARY:\n")
-	fmt.Println(pb.me);
+	fmt.Println(pb.me)
 
 	fmt.Println("\nCONTACT:\n")
 	for key, value := range pb.contact {
-		fmt.Println(key,"   \t:", value)
+		fmt.Println(key, "   \t:", value)
 	}
 
 	fmt.Println("\nEXPERIENCE:\n")
 	for _, exp := range pb.experiences {
 		for key, value := range exp {
-            fmt.Println(key,"\t:", value)
+			fmt.Println(key, "\t:", value)
 		}
 		fmt.Println("\n")
-    }
+	}
 
 	fmt.Println("\nPROJECTS:\n")
-    for _, proj := range pb.projects {
+	for _, proj := range pb.projects {
 		for key, value := range proj {
-            fmt.Println(key,"\t:", value)
+			fmt.Println(key, "\t:", value)
 		}
 		fmt.Println("\n")
-    }
+	}
 }
 
 func main() {
