@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/projects/open/nerdCV/go/curriculum.go.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="go">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #c00000; }
+.Special { color: #c000c0; }
+.Statement { color: #af5f00; }
+.Type { color: #008000; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Statement">package</span> main
+
+<span class="Statement">type</span> Experience <span class="Type">map</span>[<span class="Type">string</span>]<span class="Statement">interface</span>{}
+<span class="Statement">type</span> Project <span class="Type">map</span>[<span class="Type">string</span>]<span class="Statement">interface</span>{}
+<span class="Statement">type</span> Authors []<span class="Type">string</span>
+<span class="Statement">type</span> Skills []<span class="Type">string</span>
+
+<span class="Statement">type</span> PauloBenatto <span class="Statement">struct</span> {
+    me          <span class="Type">string</span>
+    contact     <span class="Type">map</span>[<span class="Type">string</span>]<span class="Type">string</span>
+    experiences []Experience
+    projects    []Project
+}
+
+<span class="Statement">func</span> (pb *PauloBenatto) About() {
+    pb.me = <span class="Constant">&quot;Hello,</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+        <span class="Constant">&quot;I'm a Brazilian coder working as Linux System Administrator and</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+        <span class="Constant">&quot;passionate about GoLang. I'm also interested in software development</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+        <span class="Constant">&quot;envolving languages such as C, Lua, Python and JavaScript. I am an</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+        <span class="Constant">&quot;eternal learner, with can-do attitude that enjoy sharing knowledge.&quot;</span>
+}
+
+<span class="Statement">func</span> (pb *PauloBenatto) MyExperience() {
+
+    pb.experiences = <span class="Statement">make</span>([]Experience, <span class="Constant">0</span>)
+    brandwatch := Experience{
+        <span class="Constant">&quot;Company&quot;</span>:      <span class="Constant">&quot;Brandwatch&quot;</span>,
+        <span class="Constant">&quot;Role&quot;</span>:         <span class="Constant">&quot;Linux System Administrator&quot;</span>,
+        <span class="Constant">&quot;Activities&quot;</span>:   <span class="Constant">&quot;Keep everything running.&quot;</span>,
+        <span class="Constant">&quot;Technologies&quot;</span>: Skills{<span class="Constant">&quot;Linux&quot;</span>, <span class="Constant">&quot;git&quot;</span>, <span class="Constant">&quot;bacula&quot;</span>, <span class="Constant">&quot;ansible&quot;</span>, <span class="Constant">&quot;automation&quot;</span>},
+    }
+
+    dba := Experience{
+        <span class="Constant">&quot;Company&quot;</span>: <span class="Constant">&quot;DBA&quot;</span>,
+        <span class="Constant">&quot;Role&quot;</span>:    <span class="Constant">&quot;Software Engineer Freelance&quot;</span>,
+        <span class="Constant">&quot;Activities&quot;</span>: <span class="Constant">`Develop a system, in C language, to analyse vehicle traffic</span>
+<span class="Constant">                        on Brazilian highways.`</span>,
+        <span class="Constant">&quot;Technologies&quot;</span>: Skills{<span class="Constant">&quot;Linux&quot;</span>, <span class="Constant">&quot;C/C++&quot;</span>, <span class="Constant">&quot;git&quot;</span>, <span class="Constant">&quot;python&quot;</span>, <span class="Constant">&quot;Raspberry PI&quot;</span>},
+    }
+
+    secplus := Experience{
+        <span class="Constant">&quot;Company&quot;</span>: <span class="Constant">&quot;SEC+&quot;</span>,
+        <span class="Constant">&quot;Role&quot;</span>:    <span class="Constant">&quot;Software Engineer&quot;</span>,
+        <span class="Constant">&quot;Activities&quot;</span>: <span class="Constant">`Backend development of web system for intelligent</span>
+<span class="Constant">                        monitoring and management of natural disasters using</span>
+<span class="Constant">                        Python and the Django framework.`</span>,
+        <span class="Constant">&quot;Technologies&quot;</span>: Skills{<span class="Constant">&quot;Linux&quot;</span>, <span class="Constant">&quot;C/C++&quot;</span>, <span class="Constant">&quot;git&quot;</span>, <span class="Constant">&quot;python&quot;</span>, <span class="Constant">&quot;javascript&quot;</span>},
+    }
+
+    digitro := Experience{
+        <span class="Constant">&quot;Company&quot;</span>: <span class="Constant">&quot;Digitro&quot;</span>,
+        <span class="Constant">&quot;Role&quot;</span>:    <span class="Constant">&quot;Software Engineer&quot;</span>,
+        <span class="Constant">&quot;Activities&quot;</span>: <span class="Constant">`I was part of a team responsible to develop VoIP</span>
+<span class="Constant">                        products such as softphone, PBX and IP phone.`</span>,
+        <span class="Constant">&quot;Technologies&quot;</span>: Skills{<span class="Constant">&quot;Linux&quot;</span>, <span class="Constant">&quot;C/C++&quot;</span>, <span class="Constant">&quot;Python&quot;</span>, <span class="Constant">&quot;SIP&quot;</span>, <span class="Constant">&quot;Wireshark&quot;</span>},
+    }
+    pb.experiences = <span class="Statement">append</span>(pb.experiences, brandwatch, dba, secplus, digitro)
+}
+
+<span class="Statement">func</span> (pb *PauloBenatto) Contact() {
+
+    pb.contact = <span class="Type">map</span>[<span class="Type">string</span>]<span class="Type">string</span>{
+        <span class="Constant">&quot;phone&quot;</span>:    <span class="Constant">&quot;07424600850&quot;</span>,
+        <span class="Constant">&quot;address&quot;</span>:  <span class="Constant">&quot;Sudeley Place 14, Brighton, UK&quot;</span>,
+        <span class="Constant">&quot;email&quot;</span>:    <span class="Constant">&quot;benatto@gmail.com&quot;</span>,
+        <span class="Constant">&quot;github&quot;</span>:   <span class="Constant">&quot;github.com/patito&quot;</span>,
+        <span class="Constant">&quot;blog&quot;</span>:     <span class="Constant">&quot;patito.github.io&quot;</span>,
+        <span class="Constant">&quot;linkedin&quot;</span>: <span class="Constant">&quot;<a href="https://uk.linkedin.com/in/benatto">https://uk.linkedin.com/in/benatto</a>&quot;</span>,
+    }
+}
+
+<span class="Statement">func</span> (pb *PauloBenatto) OpenSource() {
+
+    pb.projects = <span class="Statement">make</span>([]Project, <span class="Constant">0</span>)
+
+    libmalelf := Project{
+        <span class="Constant">&quot;description&quot;</span>: <span class="Constant">`The libmalelf is an evil library that SHOULD be</span>
+<span class="Constant">            used for good! It was developed with the intent to assist in</span>
+<span class="Constant">            the process of infecting binaries and provide a safe way to</span>
+<span class="Constant">            analyze malwares.`</span>,
+        <span class="Constant">&quot;authors&quot;</span>: Authors{<span class="Constant">&quot;Tiago Natel de Moura&quot;</span>, <span class="Constant">&quot;Paulo Leonardo Benatto&quot;</span>},
+        <span class="Constant">&quot;site&quot;</span>:    <span class="Constant">&quot;github.com/SecPlus/libmalelf&quot;</span>,
+    }
+
+    libpenetra := Project{
+        <span class="Constant">&quot;description&quot;</span>: <span class="Constant">`The libpenetra was created with the goal of</span>
+<span class="Constant">            studying the windows binary format known as Portable</span>
+<span class="Constant">            Executable (PE).`</span>,
+        <span class="Constant">&quot;authors&quot;</span>: Authors{<span class="Constant">&quot;Tiago Natel de Moura&quot;</span>, <span class="Constant">&quot;Paulo Leonardo Benatto&quot;</span>},
+        <span class="Constant">&quot;site&quot;</span>:    <span class="Constant">&quot;github.com/patito/libpenetra&quot;</span>,
+    }
+
+    pb.projects = <span class="Statement">append</span>(pb.projects, libmalelf, libpenetra)
+}
+
+<span class="Statement">func</span> main() {
+    pb := &amp;PauloBenatto{}
+    pb.About()
+    pb.MyExperience()
+    pb.OpenSource()
+    pb.Contact()
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
