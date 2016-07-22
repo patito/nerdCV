@@ -1,5 +1,4 @@
 import textwrap
-import pprint
 
 class PauloBenatto(object):
 
@@ -89,8 +88,5 @@ class PauloBenatto(object):
 
 if __name__ == "__main__":
     plb = PauloBenatto()
-    plb.experience()
-    plb.contact()
-    plb.opensource()
     
     print(plb.me)
