@@ -9,7 +9,7 @@ class PauloBenatto(object):
         self.exp = []
 
         self.me = textwrap.dedent("""
-	    Hello, 
+            Hello, 
             my name is Paulo Leonardo Benatto, a Brazilian coder
             delivering nonsense bugs and still want to be paid for that.
             I'm interested in software development envolving languages
