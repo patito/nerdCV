@@ -1,18 +1,23 @@
+import textwrap
+import pprint
+
 class PauloBenatto(object):
 
     def __init__(self):
         self.skills = ["Linux", "C", "Python", "Go", "git"]
         self.interests = ["GoLang", "Python", "C", "JavaScript", "Lua"]
+        self.projects = []
+        self.exp = []
 
-        self.me = """Hello, 
+        self.me = textwrap.dedent("""
+	    Hello, 
             my name is Paulo Leonardo Benatto, a Brazilian coder
             delivering nonsense bugs and still want to be paid for that.
             I'm interested in software development envolving languages
-            such as C, Lua, Python, Go, JavaScript and Ruby."""
+            such as C, Lua, Python, Go, JavaScript and Ruby.
+            """)
 
     def experience(self):
-        self.exp = []
-
         brandwatch = {
             "Company": "Brandwatch",
             "Role": "Linux System Administrator",
@@ -52,7 +57,6 @@ class PauloBenatto(object):
        
 
     def opensource(self):
-        self.projects = []
 
         libmalelf = {
             "description": """The libmalelf is an evil library that SHOULD be
@@ -74,7 +78,7 @@ class PauloBenatto(object):
         self.projects.append(libpenetra)
 
     def contact(self):
-        self.contact_ = {
+        self.contact = {
             "phone": "07424600850",
             "address": "Sudeley Place 14, Brighton, UK",
             "email": "benatto@gmail.com",
@@ -85,4 +89,8 @@ class PauloBenatto(object):
 
 if __name__ == "__main__":
     plb = PauloBenatto()
+    plb.experience()
+    plb.contact()
+    plb.opensource()
+    
     print(plb.me)
