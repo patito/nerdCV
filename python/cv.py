@@ -24,7 +24,7 @@ class PauloBenatto(object):
             "golang": "I use for REST APIs and because I love Rob Pike.",
             "c": "I use @?5?h@R?%. Segmentation fault.",
             "javascript": "I think I know how to use it, but I don't",
-            "linux": "I use to have fluxbox running and matrix screensaver.",
+            "linux": "I use it to have fluxbox running and matrix screensaver.",
             "stack overflow": "This is my teacher, lover and soulmate."
         }
 
