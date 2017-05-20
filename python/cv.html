@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PauloBenatto</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Paulo Leonardo Benatto is a hobbit developer, sometimes confused with</span>
+<span class="sd">       Oompa Loompa, from Shire, living and drinking pints in Brighton, UK.</span>
+<span class="sd">       Yeah, I know, I&#39;m weird.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">&quot;hobbit&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interests</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;learning&quot;</span><span class="p">,</span> <span class="s2">&quot;coding&quot;</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;go&quot;</span><span class="p">,</span> <span class="s2">&quot;linux&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">contact</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># douchebags like me feel hacker using b64 =)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;YmVuYXR0b0BnbWFpbC5jb20=&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linkedin</span> <span class="o">=</span> <span class="s2">&quot;https://www.linkedin.com/in/benatto/&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">github</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/patito&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blog</span> <span class="o">=</span> <span class="s2">&quot;http://benatto.xyz&quot;</span>
+
+    <span class="k">def</span> <span class="nf">weapons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;I use different weapons in different wars =). I know Pascal as well</span>
+<span class="sd">           but I&#39;m emberassed to add in my CV hehe.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="s2">&quot;I use for task automation, CLIs or running out of time.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;golang&quot;</span><span class="p">:</span> <span class="s2">&quot;I use for REST APIs and because I love Rob Pike.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;I use @?5?h@R?%. Segmentation fault.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;javascript&quot;</span><span class="p">:</span> <span class="s2">&quot;I think I know how to use it, but I don&#39;t&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;linux&quot;</span><span class="p">:</span> <span class="s2">&quot;I use to have fluxbox running and matrix screensaver.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stack overflow&quot;</span><span class="p">:</span> <span class="s2">&quot;This is my teacher, lover and soulmate.&quot;</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">battles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;I have gained some experience being involved in different battles&quot;&quot;&quot;</span>
+
+        <span class="n">my_battles</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">my_battles</span><span class="p">[</span><span class="s2">&quot;return_of_brandwatch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;July 2016 - Present&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;warrior&quot;</span><span class="p">:</span> <span class="s2">&quot;Core Systems Engineer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;Automating tasks in Python and Go.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weapons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span> <span class="s2">&quot;golang&quot;</span><span class="p">,</span> <span class="s2">&quot;rest apis&quot;</span><span class="p">],</span>
+        <span class="p">}</span>
+
+        <span class="n">my_battles</span><span class="p">[</span><span class="s2">&quot;sainsburys&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;Feb 2016 - July 2016&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;warrior&quot;</span><span class="p">:</span> <span class="s2">&quot;Jr. Go Developer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;Developed Microservices in Go language&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weapons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span> <span class="s2">&quot;golang&quot;</span><span class="p">,</span> <span class="s2">&quot;rest apis&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+        <span class="n">my_battles</span><span class="p">[</span><span class="s2">&quot;brandwatch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;July 2014 - Feb 2016&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;warrior&quot;</span><span class="p">:</span> <span class="s2">&quot;Jr. linux System Administrator&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;Keep internal services running.&quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weapons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span> <span class="s2">&quot;bacula&quot;</span><span class="p">,</span> <span class="s2">&quot;ansible&quot;</span><span class="p">,</span> <span class="s2">&quot;automation&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+        <span class="n">my_battles</span><span class="p">[</span><span class="s2">&quot;dba&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 2013 - Feb 2014&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;warrior&quot;</span><span class="p">:</span> <span class="s2">&quot;Software Engineer Freelancer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;Develop a system, in C language, to analyse vehicle</span>
+<span class="s2">                        traffic on Brazilian highways.&quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weapons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;raspberry pi&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+        <span class="n">my_battles</span><span class="p">[</span><span class="s2">&quot;secplus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;when&quot;</span><span class="p">:</span> <span class="s2">&quot;Dec 2012 - Dev 2013&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;warrior&quot;</span><span class="p">:</span> <span class="s2">&quot;Software Engineer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;I have worked in natural disaster monitoring system and</span>
+<span class="s2">                        C library to malware analysis.&quot;&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weapons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">my_battles</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">pb</span> <span class="o">=</span> <span class="n">PauloBenatto</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">pb</span><span class="o">.</span><span class="n">battles</span><span class="p">())</span>
+
+<span class="c1"># I wil tell you something I wrote the test after finishing my CV code.</span>
+<span class="c1"># Yeah, I&#39;m that crazy. I know I could test better, but it is just a CV and</span>
+<span class="c1"># I promisse I will not merge with production branch or deploy in live, and</span>
+<span class="c1"># I will create a check to monitor on Sensu and Prometheus.</span>
+
+<span class="c1"># Run my test: python3 -m unittest -v -b test_cv.py</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">cv</span> <span class="kn">import</span> <span class="n">PauloBenatto</span>
+
+
+<span class="k">class</span> <span class="nc">TestPauloBentto</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plb</span> <span class="o">=</span> <span class="n">PauloBenatto</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_battles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">battles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">battles</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">battles</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">battles</span><span class="p">[</span><span class="s2">&quot;dba&quot;</span><span class="p">][</span><span class="s2">&quot;warrior&quot;</span><span class="p">],</span>
+                         <span class="s2">&quot;Software Engineer Freelancer&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">battles</span><span class="p">[</span><span class="s2">&quot;return_of_brandwatch&quot;</span><span class="p">][</span><span class="s2">&quot;weapons&quot;</span><span class="p">],</span>
+                         <span class="p">[</span><span class="s2">&quot;linux&quot;</span><span class="p">,</span> <span class="s2">&quot;golang&quot;</span><span class="p">,</span> <span class="s2">&quot;rest apis&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
+                         <span class="n">battles</span><span class="p">[</span><span class="s2">&quot;secplus&quot;</span><span class="p">][</span><span class="s2">&quot;weapons&quot;</span><span class="p">]))),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># Please, be equal 0, please</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;pascal&quot;</span><span class="p">,</span>
+                         <span class="n">battles</span><span class="p">[</span><span class="s2">&quot;brandwatch&quot;</span><span class="p">][</span><span class="s2">&quot;weapons&quot;</span><span class="p">]))),</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_weapons</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">weapons</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">weapons</span><span class="p">()</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="n">weapons</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">),</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;python&quot;</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;linux&quot;</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="c1"># please be false _o/</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;delphi&quot;</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_contact</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">contact</span><span class="p">()</span>
+        <span class="c1"># Now you know my email =), but I&#39;m still a douchebag</span>
+        <span class="kn">import</span> <span class="nn">base64</span>
+        <span class="c1"># converting bytes to str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">email</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span>
+                         <span class="s2">&quot;benatto@gmail.com&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">blog</span><span class="p">,</span> <span class="s2">&quot;http://benatto.xyz&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">linkedin</span><span class="p">,</span> <span class="s2">&quot;https://www.linkedin.com/in/benatto/&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">github</span><span class="p">,</span> <span class="s2">&quot;https://github.com/patito&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># please be true =)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;human&quot;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="c1"># please be false =(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;hobbit&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_interest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;surf&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">interests</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;guitar&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">interests</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;rock&#39;n&#39;roll&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">interests</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="c1"># What is wrong with me, if you are reading that u know the</span>
+        <span class="c1"># answer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;coding&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">interests</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;linux&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plb</span><span class="o">.</span><span class="n">interests</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</body>
+</html>
