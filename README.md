@@ -3,6 +3,10 @@ nerdCV
 
 Makeing me more antisocial and weird. :D
 
+```
+pygmentize -f html -O "full,linenos=True" -o py-cv.html nani.py
+```
+
 
 License
 =======
